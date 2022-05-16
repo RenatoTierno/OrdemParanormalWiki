@@ -1,0 +1,47 @@
+body {
+    margin: 0px;
+    background-color: black;
+    font-family: sans-serif;
+}
+.header {
+    background-color: black;
+    display: flex;
+}
+.container {
+    width: 80vw;
+    display: flex;
+    margin: 0 auto;
+}
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    border-bottom: 2px #8cc0d1 solid;
+    box-shadow: 0px 4px 8px #8cc0d1;
+}
+.logo1 {
+    width: 25vw;
+    margin-right: 300px;
+}
+.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+.navbar li{
+    display: flex;
+    color: #8cc0d1;
+    
+}
+.navbar li a{
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: bold;
+    margin-right: 3vw;
+}
