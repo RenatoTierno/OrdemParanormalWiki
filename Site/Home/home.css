@@ -1,4 +1,4 @@
-body {
+body { 
     margin: 0px;
     background-color: black;
     font-family: sans-serif;
@@ -16,6 +16,7 @@ header .container {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    justify-self: top;
     background-color: black;
     position: fixed;
     width: 100%;
@@ -24,7 +25,7 @@ header .container {
     box-shadow: 0px 4px 8px #8cc0d1;
 }
 .logo1 {
-    width: 25vw;
+    width: 20vw;
     margin-right: 300px;
 }
 .navbar {
@@ -51,4 +52,23 @@ header .container {
     color: white;
     text-shadow: 0 0 10px #ffbc4f;
     transition: 0.6s;
+}
+main {
+    height: 120vh;
+    display: flex;
+}
+.mainpage {
+    display: flex;
+    margin: auto; 
+    margin-top: 75px;
+    height: 755px;
+    width: 755px;
+    background-image: url(imagens/spiralis2.webp);
+}
+.mainpage h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffe0af;
+    text-shadow:0px 0px 20px #ffbc4f;
 }
