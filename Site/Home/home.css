@@ -64,11 +64,22 @@ main {
     height: 755px;
     width: 755px;
     background-image: url(imagens/spiralis2.webp);
+    flex-direction: column;
 }
-.mainpage h3 {
+.mainpage h3  {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     color: #ffe0af;
     text-shadow:0px 0px 20px #ffbc4f;
+    margin-top: 20%;    
 }
+.mainpage p {
+    display: flex;
+    width: 200px;
+    height: 100px;
+    background-color: red;
+}
+
+
