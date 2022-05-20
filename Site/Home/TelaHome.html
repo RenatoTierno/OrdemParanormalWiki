@@ -15,8 +15,9 @@
             </div>
 
             <ul class="navbar">
-                <li><a href="../Cadastro/Cadastro.html"></a>Cadastro</li>
-                <li><a href=""></a>Login</li>
+                <li><a href="TelaHome.html">Home</a></li>
+                <li><a href="../Cadastro/Cadastro.html">Cadastro</a></li>
+                <li><a href="">Login</a></li>
             </ul>
         </div>
     </header>
@@ -26,8 +27,22 @@
             Aqui você vai encontrar tudo a respeito do universo de Ordem Paranormal, atualizando as informações conforme o passar das temporadas! <br> 
             Cadastre-se agora mesmo e tenha acesso a tudo que você precisa saber para estar por dentro desse universo tão querido!
             </h3>
-            <p class="info"></p>
+            <p><button onclick="sinopse()" id="btn_sinopse">Sinopse Ordem Paranormal</button></p>
+            <div class="info" id="div_info">
+                "A magia não vem para a nossa realidade de forma fácil. O mundo tem uma base de sanidade muito sólida, e por isso que fantasmas e manifestações paranormais são encontrados em locais específicos por pessoas muito sensíveis. Mas, e se um grupo de pessoas começasse a conspirar, gerando pânico e medo do paranormal, forjando assombrações falsas, criando conspirações absurdas, espalhando histórias de fantasmas, fazendo com que o medo do sobrenatural se tornasse mais comum?"
+            </div>
         </div>
     </main> 
 </body>
 </html>
+
+<script>
+    var contador = 1
+    function sinopse() {
+        div_info.style.display = 'flex'
+        contador++
+        if (contador%2 != 0) {
+            div_info.style.display = 'none'
+        }
+    }
+</script>
