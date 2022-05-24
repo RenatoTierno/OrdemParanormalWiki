@@ -122,10 +122,52 @@ main {
     border: red solid;
     background: url(../assets/imgs/cultomedo.webp);
     background-size: cover;
-
-
 }
-
-
-
+footer{
+    background-color: black;
+    width: 100%;
+    height: 17vh;
+    display: flex;
+    position: absolute;
+    border-top: 2px #8cc0d1 solid;
+    box-shadow: 0px 4px 8px 8px #8cc0d1;
+    margin-top: 100px;
+}
+.conteudo_footer {
+    color: white;
+    text-shadow:0px 0px 20px #ffbc4f;
+    font-size: 1.2em;
+    display: flex;
+    align-self: top;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.navbar_footer{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    flex-direction: column;
+    width: 100%;
+}
+footer .conteudo_footer {
+    display: flex;
+    align-items: center;
+}
+.conteudo_footer2 {
+    display: flex;
+    flex-direction: row;
+    height: 90px;
+    width: 850px;
+    justify-content: space-around;
+}
+.navbar_footer2 {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    width: 500px;
+}
 
