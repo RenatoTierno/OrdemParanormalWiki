@@ -55,17 +55,35 @@
                          Assim que inserir vá para o script abaixo.
                      -->
 
-                    <!--<span class="tipo_campo">Nome:</span>
-                    <input id="nome_input" type="text" placeholder="Seu nome">
+                    
+                    <span class="tipo_campo">Nome:</span>
+                    <input id="inp_nome" type="text" placeholder="Seu nome">
 
+                    <span class="tipo_campo">Personagem Favorito:</span>
+                     <select name="" id="sel_votacao">
+                         <option value="Kaiser">Cesar/Kaiser</option>
+                         <option value="Joui">Joui Jouki</option>
+                         <option value="Arthur">Arthur Cevero</option>
+                         <option value="Thiago">Thiago Fritz</option>
+                         <option value="Dante">Dante</option>
+                         <option value="Liz">Elizabeth Webber</option>
+                         <option value="Luciano">Luciano/Fernando</option>
+                         <option value="Erin">Erin Parker</option>
+                         <option value="Balu">Balu</option>
+                         <option value="Beatrice">Beatrice Portinari</option>
+                         <option value="Carina">Carina Leone</option>
+                         <option value="Rubens">Rubens Naluti</option>
+                     </select>
+
+                     
                     <span class="tipo_campo">E-mail:</span>
-                    <input id="email_input" type="text" placeholder="meuemail@provedor.com">
+                    <input id="inp_email" type="text" placeholder="meuemail@provedor.com">
 
                     <span class="tipo_campo">Senha:</span>
-                    <input id="senha_input" type="password" placeholder="******">
+                    <input id="inp_senha" type="password" placeholder="******">
 
                     <span class="tipo_campo">Confirmação da Senha:</span>
-                    <input id="confirmacao_senha_input" type="password" placeholder="******">
+                    <input id="inp_confirmacaosenha" type="password" placeholder="******">
 
                     <button class="btn" onclick="cadastrar()">Cadastrar</button>
 
@@ -113,10 +131,11 @@
 
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
-        var nomeVar = nome_input.value;
-        var emailVar = email_input.value;
-        var senhaVar = senha_input.value;
-        var confirmacaoSenhaVar = confirmacao_senha_input.value;
+        var nomeVar = inp_nome.value;
+        var personagemVar = sel_votacao.value;
+        var emailVar = inp_email.value;
+        var senhaVar = inp_senha.value;
+        var confirmacaoSenhaVar = inp_confirmacaosenha.value;
 
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
             cardErro.style.display = "block"
