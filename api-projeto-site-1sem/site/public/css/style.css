@@ -18,6 +18,7 @@ header .container {
   justify-content: space-around;
   justify-self: top;
   background-color: black;
+  height: 15vh;
   position: fixed;
   width: 100%;
   z-index: 1;
@@ -57,13 +58,13 @@ header .container {
   transform: scale(1.05); 
 }
 main {
-  height: 120vh;
+  height: 150vh;
   display: flex;
 }
 footer{
   background-color: black;
   width: 100%;
-  height: 17vh;
+  height: 16vh;
   display: flex;
   position: absolute;
   border-top: 2px #8cc0d1 solid;
@@ -113,9 +114,8 @@ footer .conteudo_footer {
   display: flex;
   flex-direction: column;
   width: 50%;
-  justify-content: center;
   text-align: center; 
-
+  margin-left: 125px;
 }
 
 .formulario .tipo_campo {
@@ -131,26 +131,55 @@ footer .conteudo_footer {
   color: white;
   align-items: center;
   justify-content: center;
+  justify-items: center;
+  text-shadow: 0px 0px 10px #ffbc4f;
+  
 }
 .banner {
   display: flex;
   width: 100%;
-  height: 70vh;
+  height: 150vh;
   margin-top: 200px;
   justify-content: center;
   align-items: center;
   justify-items: center;
   text-align: center;
+  animation: slide 15s infinite;
+  background-repeat: no-repeat;
+  background-position: center; 
+  
+}
+@keyframes slide {
+  0%,
+  15% {
+    background-image: url(../assets/imgs/MarcaLuba.webp);
+  }
+  22%,
+  37% {
+    background-image: url(../assets/imgs/MarcaGuaxinim.webp);
+  }
+  44%,
+  59% {
+    background-image: url(../assets/imgs/MarcaRakin.webp);
+  }
+  66%,
+  81% {
+    background-image: url(../assets/imgs/MarcaCalango.webp);
+  }
+  88%,
+  100% {
+    background-image: url(../assets/imgs/MarcaGabi.webp);
+  }
 }
 .card_medio {
-  background-color: rgba(255, 0, 0, 0.596);
+  background-color: rgba(255, 0, 0, 0.356);
   align-items: center;
   flex-direction: column;
-  height: 400px;
+  height: 500px;
   width: 500px;
   justify-content: center;
-  /*  */
   border-radius: 10px;
+  margin-bottom: 400px;
 }
 input {
   margin-bottom: 10px;
