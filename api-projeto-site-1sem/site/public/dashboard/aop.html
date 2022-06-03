@@ -18,7 +18,9 @@
         rel="stylesheet">
         <style>
             .mySlides {display:none;}
-            .descricoes {display:none}
+            .descricoes {display:none;}
+            .mySlides2 {display: none;}
+            .descricoes2 {display: none;}
             </style>
 </head>
 
@@ -63,28 +65,45 @@
             <h2 class="w3-center">PERSONAGENS PRINCIPAIS</h2>
 
                 <div class="slider">
-            <img class="mySlides" src="../assets/imgs/DanielHartmannAOP.webp" style="height: 300px;
+            <img class="mySlides" src="../assets/imgs/DanielHartmannAOP.webp" style="height: 400px;
             ">
-            <img class="mySlides" src="../assets/imgs/ElizabethWebberAOP.webp" style="height: 300px; ">
-            <img class="mySlides" src="../assets/imgs/ThiagoFritzAOP.webp" style="height: 300px;">
-            <img class="mySlides" src="../assets/imgs/AlexsanderKotheAOP.webp" style="height: 300px;">
+            <img class="mySlides" src="../assets/imgs/ElizabethWebberAOP.webp" style="height: 400px; ">
+            <img class="mySlides" src="../assets/imgs/ThiagoFritzAOP.webp" style="height: 400px;">
+            <img class="mySlides" src="../assets/imgs/AlexsanderKotheAOP.webp" style="height: 400px;">
             <p class="descricoes">
-                Daniel Hartmann <br>
-
+                <span class="titulo">DANIEL HARTMANN</span> <br> <br>
+                Um escritor de contos de terror que era fascinado pelo mundo paranormal e possuía um vasto conhecimento sobre culturas e religiões que lidavam com a vida após a morte, pois Daniel procurava desesperadamente algum tipo de contato com sua falecida mãe. <br> Porém, após descobrir que o medo causado por suas histórias afetava diretamente a membrana, Daniel entrou para a Ordo Realitas, buscando compensar por seus atos. 
             </p>
             <p class="descricoes">
-                Elizabeth Webber
+               <span class="titulo">ELIZABETH WEBBER</span> <br> <br>
+               Uma cientista forense e médica, altamente inteligente e habilidosa, com uma obsessão por criar teorias e desvendar casos. <br> Com 18 anos, sua mãe se envolveu em um acidente de carro fatal, do qual não acreditou ser real, pois o corpo estava completamente destruído. <br>
+               Liz então entra para a Ordo Realitas com a missão de descobrir a verdade sobre sua mãe e evitar que outras pessoas passem por acontecimentos parecidos.
             </p>
             <p class="descricoes">
-                Thiago Fritz
+                <span class="titulo">THIAGO FRITZ</span> <br> <br>
+                Um jornalista que decidiu seguir essa carreira para escrever histórias de pessoas incríveis como seu pai, Arnaldo Fritz, que o criou sozinho. <br>
+                Entretanto, após a suposta morte de seu pai, ele encontrou uma carta detalhando o envolvimento com a Ordem, que despertou seu interesse. <br> Após isso, se juntou a Ordem depois de um treinamento para disparar armas e por conta de suas habilidades de investigação.
             </p>
             <p class="descricoes">
-                Alexsander Kothe
+                <span class="titulo">ALEXSANDER KOTHE</span> <br> <br>
+                Um professor de história que de início era suspeito, porém acabou entrando para a equipe de Daniel após ser provado inocente. <br> Por conta de acontecimentos fora do comum na escola em que lecionava, Alex resolve se juntar a investigação e acaba se suicidando com um tiro na cabeça após perder completamente a sanidade, fruto da cena onde um monstro parte Daniel Hartmann ao meio, não dando chance dele fazer nada.
             </p>
 
             <button class="btn_left" onclick="plusDivs(-1)">&#10094;</button>
             <button class="btn_right" onclick="plusDivs(1)">&#10095;</button>
-</div>
+
+            <h2 class="w3-center">MONSTROS PRINCIPAIS</h2>
+
+            <div class="slider2">
+        <img class="mySlides2" src="../assets/imgs/DanielHartmannAOP.webp" style="height: 400px;
+        ">
+        <img class="mySlides2" src="../assets/imgs/ElizabethWebberAOP.webp" style="height: 400px; ">
+        <img class="mySlides2" src="../assets/imgs/ThiagoFritzAOP.webp" style="height: 400px;">
+        <img class="mySlides2" src="../assets/imgs/AlexsanderKotheAOP.webp" style="height: 400px;">
+        <button class="btn_left2" onclick="plusDivs2(-1)">&#10094;</button>
+        <button class="btn_right2" onclick="plusDivs2(1)">&#10095;</button>
+            
+    </div>
         </div>
     </main>
 <footer>
@@ -134,6 +153,32 @@ function showDivs(n) {
   x[slideIndex-1].style.display = "block";
 }
 
+var slideIndex2 = 1;
+showDivs2(slideIndex2);
+
+
+function plusDivs2(n) {
+  showDivs2(slideIndex2 += n);
+}
+
+function showDivs2(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides2");
+  if (n > x.length) {slideIndex2 = 1}
+  if (n < 1) {slideIndex2 = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex2-1].style.display = "block";
+/*   var i;
+  var x = document.getElementsByClassName("descricoes2");
+  if (n > x.length) {slideIndex2 = 1}
+  if (n < 1) {slideIndex2 = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex2-1].style.display = "block"; */
+}
 /* 
     function atualizacaoPeriodica() {
         obterdados(1);
