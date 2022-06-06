@@ -91,20 +91,33 @@
 
             <button class="btn_left" onclick="plusDivs(-1)">&#10094;</button>
             <button class="btn_right" onclick="plusDivs(1)">&#10095;</button>
-
-            <h2 class="w3-center">MONSTROS PRINCIPAIS</h2>
+        </div>
+            <h2 class="titulomonstros">MONSTROS PRINCIPAIS</h2>
 
             <div class="slider2">
-        <img class="mySlides2" src="../assets/imgs/DanielHartmannAOP.webp" style="height: 400px;
+        <img class="mySlides2" src="../assets/imgs/ZumbiDeSangue.webp" style="height: 400px; width: 151px;
         ">
-        <img class="mySlides2" src="../assets/imgs/ElizabethWebberAOP.webp" style="height: 400px; ">
-        <img class="mySlides2" src="../assets/imgs/ThiagoFritzAOP.webp" style="height: 400px;">
-        <img class="mySlides2" src="../assets/imgs/AlexsanderKotheAOP.webp" style="height: 400px;">
+        <img class="mySlides2" src="../assets/imgs/Bestial.webp" style="height: 400px; ">
+        <img class="mySlides2" src="../assets/imgs/Degolificda (2).jpg" style="height: 400px;">
+        
+        <p class="descricoes2">
+            <span class="titulo">ZUMBI DE SANGUE</span> <br> <br>
+            Um escritor de contos de terror que era fascinado pelo mundo paranormal e possuía um vasto conhecimento sobre culturas e religiões que lidavam com a vida após a morte, pois Daniel procurava desesperadamente algum tipo de contato com sua falecida mãe. <br> Porém, após descobrir que o medo causado por suas histórias afetava diretamente a membrana, Daniel entrou para a Ordo Realitas, buscando compensar por seus atos. 
+        </p>
+        <p class="descricoes2">
+            <span class="titulo">ZUMBI BESTIAL</span> <br> <br>
+            Um escritor de contos de terror que era fascinado pelo mundo paranormal e possuía um vasto conhecimento sobre culturas e religiões que lidavam com a vida após a morte, pois Daniel procurava desesperadamente algum tipo de contato com sua falecida mãe. <br> Porém, após descobrir que o medo causado por suas histórias afetava diretamente a membrana, Daniel entrou para a Ordo Realitas, buscando compensar por seus atos. 
+        </p>
+        <p class="descricoes2">
+            <span class="titulo">DEGOLIFICADA</span> <br> <br>
+            Fisicamente tem a aparência de uma menina jovem com cabelos pretos, lisos e longos, que cobrem o seu rosto e percorrem seu corpo até o chão. Sua coluna é retorcida e magra e se inverte na área do abdômen deixando ele fino, os braços e as pernas parecem pendurar de seu corpo enquanto ela flutua lentamente alguns centímetros acima do chão. <br> Foi responsável pela morte de Daniel Hartmann, partindo ele ao meio de forma brutal.
+        </p>
+        
         <button class="btn_left2" onclick="plusDivs2(-1)">&#10094;</button>
         <button class="btn_right2" onclick="plusDivs2(1)">&#10095;</button>
             
     </div>
-        </div>
+        
     </main>
 <footer>
     <div class="conteudo_footer">
@@ -169,15 +182,15 @@ function showDivs2(n) {
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  x[slideIndex2-1].style.display = "block";
-/*   var i;
+   x[slideIndex2-1].style.display = "block";
+  var i;
   var x = document.getElementsByClassName("descricoes2");
   if (n > x.length) {slideIndex2 = 1}
   if (n < 1) {slideIndex2 = x.length} ;
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  x[slideIndex2-1].style.display = "block"; */
+  x[slideIndex2-1].style.display = "block"; 
 }
 /* 
     function atualizacaoPeriodica() {
