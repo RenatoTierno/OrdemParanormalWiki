@@ -21,6 +21,8 @@
             .descricoes {display:none;}
             .mySlides2 {display: none;}
             .descricoes2 {display: none;}
+            .mySlides3 {display: none;}
+            .nome_ep {display: none;}
             </style>
 </head>
 
@@ -102,11 +104,12 @@
         
         <p class="descricoes2">
             <span class="titulo">ZUMBI DE SANGUE</span> <br> <br>
-            Um escritor de contos de terror que era fascinado pelo mundo paranormal e possuía um vasto conhecimento sobre culturas e religiões que lidavam com a vida após a morte, pois Daniel procurava desesperadamente algum tipo de contato com sua falecida mãe. <br> Porém, após descobrir que o medo causado por suas histórias afetava diretamente a membrana, Daniel entrou para a Ordo Realitas, buscando compensar por seus atos. 
+           Sendo um dos monstros mais comuns, ele aparece em locais onde a membrana está fraca e o cadáver de uma pessoa está presente no ambiente. <br> Sua aparência é como a de um humano normal, porém com a carne pútrida e derretida a mostra. Além disso, possui uma boca com dentes afiados e garras extremamente grandes, utilizadas para dilacerar qualquer coisa que queiram atacar.<br> Após um certo tempo, um zumbi de sangue tem a capacidade de se transformar em um ser mais forte, o Bestial.
         </p>
         <p class="descricoes2">
             <span class="titulo">ZUMBI BESTIAL</span> <br> <br>
-            Um escritor de contos de terror que era fascinado pelo mundo paranormal e possuía um vasto conhecimento sobre culturas e religiões que lidavam com a vida após a morte, pois Daniel procurava desesperadamente algum tipo de contato com sua falecida mãe. <br> Porém, após descobrir que o medo causado por suas histórias afetava diretamente a membrana, Daniel entrou para a Ordo Realitas, buscando compensar por seus atos. 
+             O Bestial é uma forma evoluída do Zumbi de Sangue. Agora, ele está na forma quadrúpede, suas garras são ainda maiores e sua boca passa de seus olhos, sendo capaz de arrancar um membro inteiro com facilidade. <br>
+             Sua forma animalesca tem muitas vantagens em relação ao Zumbi de Sangue comum, como agilidade, destreza e resistência, já que é notávelmente maior.
         </p>
         <p class="descricoes2">
             <span class="titulo">DEGOLIFICADA</span> <br> <br>
@@ -114,11 +117,20 @@
         </p>
         
         <button class="btn_left2" onclick="plusDivs2(-1)">&#10094;</button>
-        <button class="btn_right2" onclick="plusDivs2(1)">&#10095;</button> <br> 
+        <button class="btn_right2" onclick="plusDivs2(1)">&#10095;</button> 
+    </div>
+    
         <div class="episodios">
             
+            <a href="https://www.youtube.com/watch?v=uplnCYc0fDg&list=PL7ZwE005lvhrBCqdHc3zQKoqzkklKUhN0" target="_blank"><img src="../assets/imgs/ep1AOP.webp"  width="900px" height="416.7px" alt="" class="mySlides3"></a>
+            <a href="https://www.youtube.com/watch?v=4Ud5QQ2IEgU&list=PL7ZwE005lvhrBCqdHc3zQKoqzkklKUhN0&index=2" target="_blank"><img src="../assets/imgs/ep2AOP.webp"  width="900px" height="416.7px" alt="" class="mySlides3"></a>
+            <a href="https://www.youtube.com/watch?v=dtcsHSAEik8&list=PL7ZwE005lvhrBCqdHc3zQKoqzkklKUhN0&index=3" target="_blank"><img src="../assets/imgs/ep3AOP.webp"  width="900px" height="416.7px" alt="" class="mySlides3"></a>
+            <h3 class="nome_ep">Episódio 1</h3>
+            <h3 class="nome_ep">Episódio 2</h3>
+            <h3 class="nome_ep">Episódio 3</h3>
+            <button class="btn_left3" onclick="plusDivs3(-1)">&#10094;</button>
+            <button class="btn_right3" onclick="plusDivs3(1)">&#10095;</button>
         </div>
-    </div>
         
     </main>
 <footer>
@@ -141,6 +153,7 @@
 </body>
 
 <script>
+    /* Slider PERSONAGENS */
     var slideIndex = 1;
 showDivs(slideIndex);
 
@@ -167,7 +180,7 @@ function showDivs(n) {
   }
   x[slideIndex-1].style.display = "block";
 }
-
+/* Slider MONSTROS */
 var slideIndex2 = 1;
 showDivs2(slideIndex2);
 
@@ -193,6 +206,34 @@ function showDivs2(n) {
     x[i].style.display = "none";
   }
   x[slideIndex2-1].style.display = "block"; 
+}
+
+/* Slider EPISÓDIOS*/
+var slideIndex3 = 1;
+showDivs3(slideIndex3);
+
+
+function plusDivs3(n) {
+  showDivs3(slideIndex3 += n);
+}
+
+function showDivs3(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides3");
+  if (n > x.length) {slideIndex3 = 1}
+  if (n < 1) {slideIndex3 = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+   x[slideIndex3-1].style.display = "block";
+  var i;
+  var x = document.getElementsByClassName("nome_ep");
+  if (n > x.length) {slideIndex3 = 1}
+  if (n < 1) {slideIndex3 = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex3-1].style.display = "block"; 
 }
 /* 
     function atualizacaoPeriodica() {
