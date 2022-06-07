@@ -23,8 +23,8 @@ body {
     position: fixed;
     width: 100%;
     z-index: 1;
-    border-bottom: 2px #8cc0d1 solid;
-    box-shadow: 0px 4px 8px #8cc0d1;
+    border-bottom: 2px #2bff00 solid;
+    box-shadow: 0px 4px 8px #2bff00;
   }
   .logo1 {
     width: 20vw;
@@ -108,8 +108,8 @@ body {
     height: 16vh;
     display: flex;
     position: absolute;
-    border-top: 2px #8cc0d1 solid;
-    box-shadow: 0px 4px 8px 8px #8cc0d1;
+    border-top: 2px #2bff00 solid;
+    box-shadow: 0px 4px 8px 8px #2bff00;
     margin-top: 100px;
   }
   .conteudo_footer {
@@ -167,16 +167,18 @@ body {
 .sangueaop_inverso {
   display: flex;
   position: absolute;
-  left: -1%;
-  height: 350px;
-  width: 350px;
+  left: 1%;
+  top: 20%;
+  height: 300px;
+  width: 300px;
 }
 .sangueaop {
   display: flex;
   position: absolute;
-  right: -1%;  
-  height: 350px;
-  width: 350px;
+  right: 1%;
+  top: 20%;  
+  height: 300px;
+  width: 300px;
 }
 .resumo {
   display: flex;
@@ -188,15 +190,15 @@ body {
 }
 .resumo h2 {
   text-align: center;
-  color: #8cc0d1;
-  text-shadow: 0px 0px 10px #8cc0d1;
+  color: rgb(36, 167, 36);
+  text-shadow: 0px 0px 10px rgb(36, 167, 36);
   margin-left: 90px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .resumo p {
  display: flex;
  color: white;
- text-shadow: 0px 0px 10px #8cc0d1;
+ text-shadow: 0px 0px 10px rgb(36, 167, 36);
  font-size: 1.3em;
  margin-left: 90px;
  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -204,8 +206,8 @@ body {
 }
 .infos h2 {
   margin-left: 100px;
-    color: #8cc0d1;
-  text-shadow: 0px 0px 10px #8cc0d1;
+    color: rgb(36, 167, 36);
+  text-shadow: 0px 0px 10px rgb(36, 167, 36);
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .infos {
@@ -221,18 +223,18 @@ body {
   align-items: center;
   justify-content: center;
   align-self: flex-start;
-  margin-left: 150px;
+  margin-left: 80px;
   flex-direction: row;
 }
 .btn_right {
-  margin-left: 75px;
+  margin-left: 140px;
 }
 .descricoes{
   color: white;
   display: flex;
   position: absolute;
   top: 18%;
-  right: 60%; 
+  right: 55%; 
   bottom: 0%;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   width: 200px;
@@ -296,8 +298,8 @@ body {
 .nome_ep {
   position: absolute;
   bottom: 100%;
-  color: #8cc0d1;
-  text-shadow: 0px 0px 10px #8cc0d1;
+  color: rgb(36, 167, 36);;
+  text-shadow: 0px 0px 10px rgb(36, 167, 36);
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 1.4em;
 }
