@@ -99,7 +99,7 @@ body {
     transform: scale(1.05); 
   }
   main {
-    height: 315vh;
+    height: 325vh;
     display: flex;
   }
   footer{

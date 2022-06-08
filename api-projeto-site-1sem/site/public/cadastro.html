@@ -58,19 +58,17 @@
 
                     <span class="tipo_campo">Personagem Favorito:</span>
                      <select name="" id="sel_votacao">
-                         <option value="">-- Escolha um Personagem --</option>
-                         <option value="Kaiser">Cesar/Kaiser</option>
-                         <option value="Joui">Joui Jouki</option>
-                         <option value="Arthur">Arthur Cevero</option>
-                         <option value="Thiago">Thiago Fritz</option>
-                         <option value="Dante">Dante</option>
-                         <option value="Liz">Elizabeth Webber</option>
-                         <option value="Luciano">Luciano/Fernando</option>
-                         <option value="Erin">Erin Parker</option>
-                         <option value="Balu">Balu</option>
-                         <option value="Beatrice">Beatrice Portinari</option>
-                         <option value="Carina">Carina Leone</option>
-                         <option value="Rubens">Rubens Naluti</option>
+                         <option hidden value="">-- Escolha um Personagem --</option>
+                         <option value="1">Cesar/Kaiser</option>
+                         <option value="2">Joui Jouki</option>
+                         <option value="3">Arthur Cevero</option>
+                         <option value="4">Thiago Fritz</option>
+                         <option value="5">Dante</option>
+                         <option value="6">Elizabeth Webber</option>
+                         <option value="7">Erin Parker</option>
+                         <option value="8">Balu</option>
+                         <option value="9">Carina Leone</option>
+                         <option value="10">Rubens Naluti</option>
                      </select>
 
                      
@@ -133,14 +131,14 @@
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
         var nomeVar = inp_nome.value;
-        var personagemVar = sel_votacao.value;
         var emailVar = inp_email.value;
         var senhaVar = inp_senha.value;
         var confirmacaoSenhaVar = inp_confirmacaosenha.value;
+        var fkVotacaoVar = sel_votacao.value;
 
         
 
-        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || fkVotacaoVar == "") {
             //cardErro.style.display = "block"
             alert("Seu Cadastro é inválido!");
 
@@ -161,9 +159,9 @@
                 // crie um atributo que recebe o valor recuperado aqui
                 // Agora vá para o arquivo routes/usuario.js
                 nomeServer: nomeVar,
-                personagemServer: personagemVar,
                 emailServer: emailVar,
-                senhaServer: senhaVar
+                senhaServer: senhaVar,
+                fkVotacaoServer: fkVotacaoVar
             })
         }).then(function (resposta) {
 

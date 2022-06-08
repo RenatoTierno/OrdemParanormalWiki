@@ -2,11 +2,11 @@
 <html lang="pt-br">
 
 <head>
-    <link rel="shortcut icon" href="../assets/icon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/icon/IconAOP.png" type="image/x-icon">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AcquaTec | Dashboards</title>
+    <title>Ordem Paranormal Wiki | Votação</title>
 
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="dashboards.css">
@@ -23,59 +23,57 @@
 </head>
 
 <body onload="validarSessao(), atualizarFeed()">
-
-    <div class="janela">
-        <div class="header-left">
-            <h1>AcquaTec</h1>
-
-            <div class="hello">
-                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="../assets/imgs/op-logo.png" alt="" class="logo1">
+                    <!-- <div class="hello">
+                    <h3>Bem Vindo, <span id="b_usuario">usuário</span>!</h3>
+                </div> -->
             </div>
 
-            <div class="btn-nav-white">
-                <a href="./cards.html">
-                    <h3>Aquários</h3>
-                </a>
-            </div>
-
-            <div class="btn-nav">
-
-                <h3>Gráficos</h3>
-
-            </div>
-
-            <div class="btn-nav-white">
-                <a href="./mural.html">
-                    <h3>Mural de Avisos</h3>
-                </a>
-            </div>
-
-            <div class="btn-logout" onclick="limparSessao()">
-                <h3>Sair</h3>
-            </div>
-
+            <ul class="navbar">
+                <li><a href="../index.html" class="sair">Sair</a></li>
+                <li><a href="aop.html" class="aop">AOP</a></li>
+                <li><a href="osnf.html" class="osnf">O Segredo Na Floresta</a></li>
+                <li><a href="desconjuracao.html" class="desconjuracao">Desconjuração</a></li>
+                <li><a href="calamidade.html" class="calamidade">Calamidade</a></li>
+                <li><a href="dashboard.html" class="votacao">Votação</a></li>
+            </ul>
         </div>
-
-        <div class="dash">
-            <div class="btns-dash">
-                <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
-                <button class="btn-chart btn-pink" onclick="obterDadosGrafico(1)">Aquario 1</button>
-                <button class="btn-chart btn-white" onclick="obterDadosGrafico(2)">Aquario 2</button>
-                <button class="btn-chart btn-white" onclick="obterDadosGrafico(3)">Aquario 3</button>
-                <button class="btn-chart btn-white" onclick="obterDadosGrafico(4)">Aquario 4</button>
-            </div>
-            <div>
-                <h3 class="tituloGraficos">
-                    <span id="tituloAquario">123</span>
-                </h3>
-            </div>
+    </header>
+    <main>
+                    <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
+                <!-- <button class="btn-chart btn-pink" onclick="obterDadosGrafico(1)">Personagens Preferidos</button> -->
+            <h3 class="titulografico">PERSONAGENS MAIS VOTADOS
+            </h3>        
             <div class="graph">
-                <canvas id="canvas_grafico"></canvas>
+                <canvas style="background-color: white;" id="canvas_grafico"></canvas>
+                    <h3 class="danoarma">Teste o Dano de algumas armas/rituais!</h3>
+                <div class="testearmas">
+                    <button class="btn_rolar" onclick="rolarShinokage()">Shinokage</button>
+                    <button class="btn_rolar" onclick="rolarEcoDolor()">Ritual EcoDolor</button>
+                </div>
+                <h3 class="danoarma">Conheça as músicas mais tocadas de todas as temporadas!</h3>
+                
             </div>
+</main>
+<footer>
+    <div class="conteudo_footer">
+        <ul class="navbar_footer">
+        <li>Siga o criador dessa wiki em suas redes sociais!</li>
+        <li>Feito por um aluno SPTech&hearts;</li>
+        </ul>
+        <div class="conteudo_footer2">
+            <ul class="navbar_footer2">
+                <li><a href="https://www.facebook.com/renato.tierno/"><img src="../assets/icon/facebookLogo.png" height="50px" width="50px" alt=""></a></li>
+                <li><a href="https://www.instagram.com/reh_tierno/"><img src="../assets/icon/instagramLogo.png" height="50px" width="50px" alt=""></a></li>
+                <li><a href="https://twitter.com/Renattolla"><img src="../assets/icon/TwitterLogo.png" height="50px" width="50px" alt=""></a></li>
+            </ul>
         </div>
+
     </div>
-
-
+</footer>
 </body>
 
 </html>
@@ -86,14 +84,13 @@
 
     window.onload = obterDadosGrafico(1);
 
-    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
-    verificar_autenticacao();
+    // verificar_autenticacao();
 
-    function alterarTitulo(idAquario) {
-        var tituloAquario = document.getElementById("tituloAquario")
-        tituloAquario.innerHTML = "Últimas medidas de Temperatura e Umidade do <span style='color: #e6005a'>Aquário " + idAquario + "</span>"
-    }
+    // function alterarTitulo(idAquario) {
+    //     var tituloAquario = document.getElementById("tituloAquario")
+    //     tituloAquario.innerHTML = "Últimas medidas de Temperatura e Umidade do <span style='color: #e6005a'>Aquário " + idAquario + "</span>"
+    // }
 
     // O gráfico é construído com três funções:
     // 1. obterDadosGrafico -> Traz dados do Banco de Dados para montar o gráfico da primeira vez
@@ -107,19 +104,19 @@
     //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
     //     Para ajustar o "select", ajuste o comando sql em src/models
     function obterDadosGrafico(idAquario) {
-        alterarTitulo(idAquario)
+        // alterarTitulo(idAquario)
 
         if (proximaAtualizacao != undefined) {
             clearTimeout(proximaAtualizacao);
         }
 
-        fetch(`/medidas/ultimas/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+        fetch(`/medidas/ultimas/`, { cache: 'no-store' }).then(function (response) {
             if (response.ok) {
                 response.json().then(function (resposta) {
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
                     resposta.reverse();
 
-                    plotarGrafico(resposta, idAquario);
+                    plotarGrafico(resposta);
                 });
             } else {
                 console.error('Nenhum dado encontrado ou erro na API');
@@ -133,25 +130,17 @@
     // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
     // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
     // A função *plotarGrafico* também invoca a função *atualizarGrafico*
-    function plotarGrafico(resposta, idAquario) {
+    function plotarGrafico(resposta) {
         console.log('iniciando plotagem do gráfico...');
 
         var dados = {
             labels: [],
             datasets: [
                 {
-                    yAxisID: 'y-umidade',
-                    label: 'Umidade',
-                    borderColor: '#32B9CD',
-                    backgroundColor: '#32b9cd8f',
-                    fill: true,
-                    data: []
-                },
-                {
                     yAxisID: 'y-temperatura',
-                    label: 'Temperatura',
+                    label: 'Votos',
                     borderColor: '#FFF',
-                    backgroundColor: '#32b9cd8f',
+                    backgroundColor: 'red',
                     fill: true,
                     data: []
                 }
@@ -160,15 +149,14 @@
 
         for (i = 0; i < resposta.length; i++) {
             var registro = resposta[i];
-            dados.labels.push(registro.momento_grafico);
-            dados.datasets[0].data.push(registro.umidade);
-            dados.datasets[1].data.push(registro.temperatura);
+            dados.labels.push(registro.personagem);
+            dados.datasets[0].data.push(registro.Qtd_Votos);
         }
 
         console.log(JSON.stringify(dados));
 
         var ctx = canvas_grafico.getContext('2d');
-        window.grafico_linha = Chart.Line(ctx, {
+        window.grafico_linha = Chart.Bar(ctx, {
             data: dados,
             options: {
                 responsive: true,
@@ -187,29 +175,30 @@
                         id: 'y-temperatura',
                         ticks: {
                             beginAtZero: true,
-                            max: 100,
+                            max: 20,
                             min: 0
                         }
-                    }, {
-                        type: 'linear',
-                        display: false,
-                        position: 'right',
-                        id: 'y-umidade',
-                        ticks: {
-                            beginAtZero: true,
-                            max: 100,
-                            min: 0
-                        },
+                     },// {
+                    //     type: 'linear',
+                    //     display: false,
+                    //     position: 'right',
+                    //     id: 'y-umidade',
+                    //     ticks: {
+                    //         beginAtZero: true,
+                    //         max: 100,
+                    //         min: 0
+                    //     },
 
-                        gridLines: {
-                            drawOnChartArea: false,
-                        },
-                    }],
+                    //     gridLines: {
+                    //         drawOnChartArea: false,
+                    //     },
+                    // }
+                ],
                 }
             }
         });
 
-        setTimeout(() => atualizarGrafico(idAquario, dados), 2000);
+        // setTimeout(() => atualizarGrafico(idAquario, dados), 2000);
     }
 
 
@@ -218,9 +207,9 @@
 
     //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
     //     Para ajustar o "select", ajuste o comando sql em src/models
-    function atualizarGrafico(idAquario, dados) {
+    function atualizarGrafico(usuario, dados) {
 
-        fetch(`/medidas/tempo-real/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+        fetch(`/medidas/tempo-real/${fkVotacao}`, { cache: 'no-store' }).then(function (response) {
             if (response.ok) {
                 response.json().then(function (novoRegistro) {
 
@@ -228,24 +217,30 @@
                     console.log(`Dados atuais do gráfico: ${dados}`);
 
                     // tirando e colocando valores no gráfico
-                    dados.labels.shift(); // apagar o primeiro
-                    dados.labels.push(novoRegistro[0].momento_grafico); // incluir um novo momento
+                    // dados.labels.shift(); // apagar o primeiro
+                    // dados.labels.push(novoRegistro[0].momento_grafico); // incluir um novo momento
                     
-                    dados.datasets[0].data.shift();  // apagar o primeiro de umidade
-                    dados.datasets[0].data.push(novoRegistro[0].umidade); // incluir uma nova medida de umidade
+                    // dados.datasets[0].data.shift();  // apagar o primeiro de umidade
+                    // dados.datasets[0].data.push(novoRegistro[0].umidade); // incluir uma nova medida de umidade
                     
-                    dados.datasets[1].data.shift();  // apagar o primeiro de temperatura
-                    dados.datasets[1].data.push(novoRegistro[0].temperatura); // incluir uma nova medida de temperatura
+                    // dados.datasets[1].data.shift();  // apagar o primeiro de temperatura
+                    // dados.datasets[1].data.push(novoRegistro[0].temperatura); // incluir uma nova medida de temperatura
+                    for(inserido = 0; inserido < novoRegistro.length; inserido++) {
+                        var registrado = novoRegistro[inserido];
+                        dados.labels.push(registro.fkVotacao);
+                        dados.datasets[1].data.push(registrado.quantidade)
+                    }
+
 
                     window.grafico_linha.update();
 
                     // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-                    proximaAtualizacao = setTimeout(() => atualizarGrafico(idAquario, dados), 2000);
+                    proximaAtualizacao = setTimeout(() => atualizarGrafico(usuario, fkVotacao), 2000);
                 });
             } else {
                 console.error('Nenhum dado encontrado ou erro na API');
                 // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-                proximaAtualizacao = setTimeout(() => atualizarGrafico(idAquario, dados), 2000);
+                proximaAtualizacao = setTimeout(() => atualizarGrafico(usuario, dados), 2000);
             }
         })
             .catch(function (error) {
@@ -253,4 +248,33 @@
             });
 
     }
+
+
+    function rolarShinokage() {
+        var dado = parseInt ((Math.random())*20) + 1
+        var danoNormal = (parseInt ((Math.random())*12) + 1) + (parseInt ((Math.random())*8) + 1) + 6
+        var critico = (parseInt ((Math.random())*12) + 1) + (parseInt ((Math.random())*12) + 1)
+
+        if (dado >= 19) {
+            alert (`Você tirou ${dado} no dado! Um acerto crítico! Seu dano total foi de ${danoNormal + critico} pontos de vida.`)
+        } else {
+            alert(`Você tirou ${dado} no dado, infelizmente não foi um acerto crítico. Seu dano total foi de ${danoNormal} pontos de vida.`)
+        }
+    }
+
+    function rolarEcoDolor() {
+        var resultados = []
+        var acertos = parseInt ((Math.random())*10) + 1
+        var SomaTotal = 0
+
+        for(contador = 0; contador < acertos; contador++) {
+            resultados.push(parseInt ((Math.random())*12) + 1)
+        }
+
+        for(contador = 0; contador < resultados.length; contador++) {        
+            SomaTotal+= resultados[contador]
+        }
+        alert(`Seu alvo foi acertado ${acertos} vezes, o que resulta num dano total de ${SomaTotal + 13} pontos de vida.`)
+    }
+
 </script>
