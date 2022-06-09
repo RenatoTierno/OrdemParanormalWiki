@@ -99,7 +99,7 @@ body {
     transform: scale(1.05); 
   }
   main {
-    height: 315vh;
+    height: 140vh;
     display: flex;
   }
   footer{
@@ -153,13 +153,13 @@ body {
   .testearmas {
       display: flex;
       width: 100%;
-      height: 500px;
+      height: 100px;
       justify-content: space-around;
   }
    .danoarma {
     display: flex;
     width: 500px;
-    margin-left: 320px;
+    margin-left: 280px;
     margin-top: 75px;
     justify-items: center;    
     color:  #d400ff;
@@ -186,3 +186,4 @@ body {
     border-color: red;
   }
   
+ 

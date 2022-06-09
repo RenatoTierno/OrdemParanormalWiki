@@ -223,7 +223,7 @@ body {
   align-items: center;
   justify-content: center;
   align-self: flex-start;
-  margin-left: 80px;
+  margin-left: 40px;
   flex-direction: row;
 }
 .btn_right {

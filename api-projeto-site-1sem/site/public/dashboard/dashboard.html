@@ -6,10 +6,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ordem Paranormal Wiki | Votação</title>
+    <title>Ordem Paranormal Wiki | Misc</title>
 
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="dashboards.css">
+    <link rel="stylesheet" href="../css/dashboards.css">
     <script src="../js/funcoes.js"></script>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -53,10 +53,8 @@
                 <div class="testearmas">
                     <button class="btn_rolar" onclick="rolarShinokage()">Shinokage</button>
                     <button class="btn_rolar" onclick="rolarEcoDolor()">Ritual EcoDolor</button>
+                    <button class="btn_rolar" onclick="rolarKunai()">Kunai</button>
                 </div>
-                <h3 class="danoarma">Conheça as músicas mais tocadas de todas as temporadas!</h3>
-                
-            </div>
 </main>
 <footer>
     <div class="conteudo_footer">
@@ -276,5 +274,25 @@
         }
         alert(`Seu alvo foi acertado ${acertos} vezes, o que resulta num dano total de ${SomaTotal + 13} pontos de vida.`)
     }
+    function rolarKunai() {
+        var resultados = []
+        var furtivo = parseInt (Math.random()*2)
+        var SomaTotal = 0
+        var dano = parseInt((Math.random())*6) + 1
+        var acerto_furtivo = 6
 
+        if(furtivo == 1) {
+            alert(`O Inimigo te viu! Nada de ataque furtivo, seu dano foi de apenas ${dano} pontos de vida`)
+        } else {
+            for(contador = 0; contador < acerto_furtivo; contador++) {
+            resultados.push(parseInt ((Math.random())*6) + 1)
+        }
+
+        for(contador = 0; contador < resultados.length; contador++) {        
+            SomaTotal+= resultados[contador]
+        }
+        alert(`O Inimigo não te viu! Seu ataque furtivo deu um dano de ${dano + SomaTotal} pontos de vida`)
+        }
+    }
+ 
 </script>
